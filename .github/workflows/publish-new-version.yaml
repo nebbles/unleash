@@ -66,7 +66,7 @@ jobs:
           else
             echo "No changes to CHANGELOG.md"
           fi
-      - run: yarn install --frozen-lockfile --ignore-scripts
+      - run: yarn install --immutable --ignore-scripts
       - name: npm version
         run: |
           npm version ${{ github.event.inputs.version }} --ignore-scripts
@@ -102,7 +102,7 @@ jobs:
           mv package.json.tmp package.json
       - name: lint
         run: |
-          yarn install --frozen-lockfile --ignore-scripts
+          yarn install --immutable --ignore-scripts
           yarn lint:fix
       - name: push changes
         run: |
