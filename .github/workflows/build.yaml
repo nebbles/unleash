@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: 20.x
           cache: 'yarn'
-      - run: yarn install --immutable --ignore-scripts
+      - run: yarn install --immutable
       - run: yarn lint
       - run: yarn build:backend
       - run: yarn run test:report # This adds test results as github check to the workflow

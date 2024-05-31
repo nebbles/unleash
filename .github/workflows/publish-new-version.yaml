@@ -66,10 +66,10 @@ jobs:
           else
             echo "No changes to CHANGELOG.md"
           fi
-      - run: yarn install --immutable --ignore-scripts
+      - run: yarn install --immutable
       - name: npm version
         run: |
-          npm version ${{ github.event.inputs.version }} --ignore-scripts
+          npm version ${{ github.event.inputs.version }} 
           git push origin ${{ github.ref_name }}
           git push --tags
         env:
@@ -102,7 +102,7 @@ jobs:
           mv package.json.tmp package.json
       - name: lint
         run: |
-          yarn install --immutable --ignore-scripts
+          yarn install --immutable
           yarn lint:fix
       - name: push changes
         run: |
