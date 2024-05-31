@@ -14,5 +14,6 @@
   "dependencies": {
     "unleash-server": "file:../build"
   },
-  "version": "5.12.4"
+  "version": "5.12.4",
+  "packageManager": "yarn@4.2.2"
 }
