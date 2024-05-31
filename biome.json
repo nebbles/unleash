@@ -42,6 +42,7 @@
     },
     "ignore": [
       "node_modules",
+      "package.json",
       "docker",
       "bundle.js",
       "website/build",
@@ -63,6 +64,7 @@
     "indentStyle": "space",
     "ignore": [
       "node_modules",
+      "package.json",
       "docker",
       "bundle.js",
       "setupJest.js",
